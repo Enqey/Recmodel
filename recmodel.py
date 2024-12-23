@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load dataset
-data_url = 'C:/Users/Lenovo/Downloads/Sample - Superstore.csv'
+data_url = 'https://github.com/Enqey/Recmodel/blob/main/Sample%20-%20Superstore.csv'
 
 st.title("🛒 Product Recommendation System")
 st.write("""
