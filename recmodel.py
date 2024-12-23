@@ -14,7 +14,8 @@ st.write("""
     Select a product, and we'll recommend others you might like.
 """)
 
-try:df = pd.read_csv(data_url, encoding='Windows-1252', on_bad_lines='skip')
+try:
+    df = pd.read_csv(data_url, encoding='Windows-1252', on_bad_lines='skip')
     st.success("Dataset loaded successfully!")
 except Exception as e:
     st.error(f"Error loading dataset: {e}")
