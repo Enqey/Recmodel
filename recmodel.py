@@ -15,7 +15,7 @@ st.write("""
 """)
 
 try:
-    df = pd.read_csv(data_url)
+  df = pd.read_csv(data_url, encoding='Windows-1252')
     st.success("Dataset loaded successfully!")
 except Exception as e:
     st.error(f"Error loading dataset: {e}")
