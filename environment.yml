@@ -1,0 +1,5 @@
+dependencies:
+ - numpy
+ - scikit-learn
+ - pandas
+ - pillow
