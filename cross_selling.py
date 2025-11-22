@@ -10,8 +10,8 @@ from itertools import combinations
 # -------------------------------
 # Load dataset
 # -------------------------------
-file_path = r"C:/Users/Lenovo/Downloads/Sdata.csv"  # replace with your CSV if needed
-df = pd.read_csv(file_path, parse_dates=['Order Date', 'Ship Date'])
+data_url = 'https://raw.githubusercontent.com/Enqey/Recmodel/main/Sdata.csv'  # GitHub raw link
+df = pd.read_csv(data_url, parse_dates=['Order Date', 'Ship Date'])
 
 st.title("🛒 Cross-Selling Product Suggestions")
 st.write("""
