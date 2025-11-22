@@ -30,7 +30,7 @@ except Exception as e:
     st.stop()
 
 # Check for missing required columns
-required_columns = ['Category', 'Sub-Category', 'Product Name']
+required_columns = ['Category', 'Sub-Category', 'Product Name', 'Product ID']
 if not all(col in df.columns for col in required_columns):
     st.error(f"Error: Dataset is missing required columns: {required_columns}")
     st.stop()
@@ -41,7 +41,7 @@ if df[required_columns].isnull().any().any():
     df.fillna('Unknown', inplace=True)
 
 # Feature engineering: Combine text features
-df['combined_features'] = df['Category'] + ' ' + df['Sub-Category'] + ' ' + df['Product Name']
+df['combined_features'] = df['Category'] + ' ' + df['Sub-Category'] + ' ' + df['Product Name'] + ' ' + df['Product ID']
 
 # Vectorize combined features
 tfidf = TfidfVectorizer(stop_words='english')
@@ -74,3 +74,4 @@ if selected_product:
         
 st.write("---")
 st.write("**Developed by Nana Ekow Okusu**")
+
